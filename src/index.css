@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 25 45% 39%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 45 93% 47%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 25 45% 39%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-fantasy-background text-foreground font-sans;
+
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgb(139 90 60 / 10%) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgb(212 175 55 / 10%) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .fantasy-gradient {
+    background: linear-gradient(135deg, #8B5A3C 0%, #D4AF37 100%);
+  }
+  
+  .fantasy-text-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .rarity-glow-common {
+    box-shadow: 0 0 20px rgb(156 163 175 / 30%);
+  }
+  
+  .rarity-glow-magic {
+    box-shadow: 0 0 20px rgb(34 197 94 / 30%);
+  }
+  
+  .rarity-glow-rare {
+    box-shadow: 0 0 20px rgb(59 130 246 / 30%);
+  }
+  
+  .rarity-glow-epic {
+    box-shadow: 0 0 20px rgb(168 85 247 / 30%);
+  }
+  
+  .rarity-glow-legendary {
+    box-shadow: 0 0 20px rgb(245 158 11 / 30%);
+  }
+  
+  .rarity-glow-mythic {
+    box-shadow: 0 0 20px rgb(239 68 68 / 30%);
+  }
+}
